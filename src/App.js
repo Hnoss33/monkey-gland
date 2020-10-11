@@ -7,7 +7,7 @@ import Login from "./Components/Login"
 // import Login from "./Login";
 import { useStateValue } from "./StateProvider";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import PopularG from './Components/PopularG'
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -28,7 +28,7 @@ function App() {
                   <Chat />
                 </Route>
                 <Route path="/">
-                  <h1>Welcome</h1>
+                  <PopularG/>
                 </Route>
               </Switch>
             </div>

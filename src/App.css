@@ -1,6 +1,8 @@
 body {
- --monkey-color: #242423; 
- overflow: hidden;
+ --monkey-color: #0d1b2a; 
+ --background-games: #e0e1dd;
+ --color-titles: #0d1b2a;
+ /* overflow: hidden; */
 }
 
 .app__body {

@@ -1,6 +1,6 @@
 .sidebar {
  color: white;
- flex: 0.3;
+ flex: 0.3 ;
  background-color: var(--monkey-color);
  border-top: 1px solid #4b4b42;
  max-width: 260px;
@@ -49,7 +49,7 @@ border: 1px solid #4b4b42;
  font-size: 14px;
  margin-top: 1px;
  margin-right: 2px;
- color: greenyellow;
+ /* color: greenyellow; */
 }
 
 

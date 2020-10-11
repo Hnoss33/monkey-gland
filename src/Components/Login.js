@@ -6,8 +6,6 @@ import Gorilla from './Styles/gorilla.png'
 import { useStateValue } from '../StateProvider'
 import { actionTypes } from '../Reducer'
 
-
-
 function Login() {
  const [state, dispatch] = useStateValue()
 
@@ -32,7 +30,7 @@ function Login() {
    />
    <h1>Welcome to</h1>
    <p>Monkeygland</p>
-   <Button onClick={signIn}>Sign in with Discord </Button>
+   <Button onClick={signIn}>Sign in with Google </Button>
    </div>
   </div>
  )
