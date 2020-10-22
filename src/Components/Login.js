@@ -6,7 +6,7 @@ import Gorilla from './Styles/gorilla.png'
 import { useStateValue } from '../StateProvider'
 import { actionTypes } from '../Reducer'
 
-function Login() {
+const Login = () => {
  const [state, dispatch] = useStateValue()
 
  const signIn = () => {

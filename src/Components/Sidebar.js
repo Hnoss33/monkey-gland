@@ -42,10 +42,10 @@ return (
       />
     </div> 
     {/* add icons to get more bottons on the sidebar */}
-    <SidebarOption Icon={GamesIcon} title="Popular Games" />
+    <SidebarOption Icon={GamesIcon} title="Games" />
     <SidebarOption Icon={ImportContactsIcon} title="Friends" />
     <hr />
-    <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
+    <SidebarOption Icon={ExpandMoreIcon} title="Chat" />
     <hr />
     <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel" />
     {channels.map((channel) => (
