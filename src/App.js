@@ -1,20 +1,15 @@
 import React from "react";
 import "./App.css";
-// import Header from "./Components/Header";
-// import Sidebar from "./Components/Sidebar";
+import Header from "./Components/Header";
+import Sidebar from "./Components/Sidebar";
 import Chat from "./Components/Chat";
 import Login from "./Components/Login"
 // import Login from "./Login";
 import { useStateValue } from "./StateProvider";
-import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PopularG from './Components/PopularG'
-import GamesUser from './Components/ChooseG'
-import SearchUser from "./Components/SearchUser"
-import NotFound from "./Components/NotFound";
-import Layout from "./Components/Layout";
 
-
-const App = () => {
+function App() {
   const [{ user }, dispatch] = useStateValue();
 
 
@@ -22,66 +17,26 @@ const App = () => {
     <div className="app">
       <Router>
         {!user ? (
-              <Login />
+          <Login />
         ) : (
-          <React.Fragment> 
-          <Layout>
+          <>
+            <Header />
+            <div className="app__body">
+              <Sidebar />
               <Switch>
-              {/* <Route path="/" component={SearchUser}/>
-              <Route path="/GamesUser" component={GamesUser}/> */}
-              <Route path="/games" component={PopularG}/>
-              <Route path="/room/:roomId" component={Chat}/>
-              <Route component={NotFound}/>
+                <Route path="/room/:roomId">
+                  <Chat />
+                </Route>
+                <Route path="/">
+                  <PopularG/>
+                </Route>
               </Switch>
-            </Layout>
-          </React.Fragment>
+            </div>
+          </>
         )}
       </Router>
     </div>
   );
 }
 
-// const Home = () => (
-// <div>
-//   <Switch>
-//   <Route path="/" component={SearchUser}/>
-//   <Route path="/GamesUser" component={GamesUser}/>
-//   </Switch>
-// </div>
-// );
-
-// <react.Fragment> esto es < > y </>
 export default App;
-
-
-// {
-//   function App() {
-//     const [{ user }, dispatch] = useStateValue();
-  
-  
-//     return (
-//       <div className="app">
-//         <Router>
-//           {!user ? (
-//             <Login />
-//           ) : (
-//             <>
-  
-//               <Header />
-//               <div className="app__body">
-//                 <Sidebar/>
-//                 <Switch>
-//                 <Route path="/SearchUser" component={SearchUser}/>
-//                 <Route path="/GamesUser" component={GamesUser}/>
-//                 <Route path="/" component={PopularG}/>
-//                 <Route path="/room/:roomId" component={Chat}/>
-//                 <Route component={NotFound}/>
-//                 </Switch>
-//               </div>
-//             </>
-//           )}
-//         </Router>
-//       </div>
-//     );
-//   }
-// }
